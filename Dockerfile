@@ -1,6 +1,5 @@
 FROM alpine:edge
 
-ENV SECRET=Hello
 ENV BASICAUTH_USER=admin
 ENV BASICAUTH_PWD=pwd123
 
