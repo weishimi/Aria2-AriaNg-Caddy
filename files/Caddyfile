@@ -1,0 +1,24 @@
+:10086 {
+  root /data
+  browse
+  gzip
+  basicauth / {$BASICAUTH_USER} {$BASICAUTH_PWD}
+  log stdout
+  errors stdout
+}
+
+:10086/mgr {
+  gzip
+  log stdout
+  errors stdout
+  filemanager / /data
+}
+
+:10086/aria2 {
+  root /aria2-webui
+  timeouts none
+  gzip
+  basicauth / {$BASICAUTH_USER} {$BASICAUTH_PWD}
+  log stdout
+  errors stdout
+}
